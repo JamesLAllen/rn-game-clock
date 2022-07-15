@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "extends": [
+    "@react-native-community",
+    "airbnb",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "semi": false,
+        "printWidth": 120
+      }
+    ],
+    "max-len": [1, { "code": 120, "ignoreUrls": true }],
+    "indent": ["error", 2],
+    "semi": [2, "never"],
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/function-component-definition": "off",
+    "react/style-prop-object": "off",
+    "react/jsx-filename-extension": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/ban-types": "off",
+    "no-use-before-define": "off",
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "lines-between-class-members": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.*"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
